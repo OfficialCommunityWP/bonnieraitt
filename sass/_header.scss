@@ -1,0 +1,629 @@
+header.site-header {
+  height: 114px;
+  background: url(/wp-content/themes/bonnieraitt/images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 4;
+  filter: drop-shadow(8px 8px 8px #000);
+  margin-bottom: 20px;
+
+  @include breakpoint(md) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    padding: 10px 15px 0;
+    width: 100vw;
+    box-shadow: 0 2px 3px -3px rgba(0, 0, 0, 0.3);
+  }
+
+  nav {
+    width: 100%; 
+  }
+
+
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    li {
+      padding: 0 5px;
+      display: block;
+      text-align: center;
+    }
+
+    .menu-left,
+    .menu-right {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      z-index: 12;
+    }
+
+    .menu-left {
+      justify-content: flex-start;
+
+      @include breakpoint(md) {
+        flex-direction: column;
+      }
+    }
+
+    .menu-right {
+      justify-content: flex-end;
+
+      @include breakpoint(md) {
+        flex-direction: column;
+      }
+    }
+  }
+
+
+
+  .header-row {
+    display: flex;
+    width: 100%;
+    height: 114px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .header-community {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      line-height: 1;
+    }
+
+    li {
+      border-right: 1px solid;
+      line-height: 1;
+      padding: 0 7px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    a {
+      font-size: 1.4rem;
+      line-height: 1;
+      text-decoration: none;
+      box-shadow: none;
+
+      @include breakpoint(xs) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .has-icon {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &:hover,
+      &:focus {
+        .svg-icon {
+          fill: $gray;
+        }
+      }
+    }
+
+    .svg-icon {
+      width: 20px;
+      height: 15px;
+      fill: $black;
+      margin-right: 5px;
+    }
+  }
+
+  .header-social {
+    display: none;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      line-height: 1;
+      margin: 0 0 20px 0;
+
+      @include breakpoint(md) {
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+
+      li {
+        background-color: $taupe;
+        border-radius: 32px;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0 5px;
+
+        &:first-child {
+          margin: 0 5px 0 0;
+        }
+
+        a {
+          font-weight: normal;
+          font-size: 2.2rem;
+          margin: 3px 0 0 0;
+          box-shadow: none;
+
+          @include breakpoint(xs) {
+            margin: 0 5px;
+          }
+
+          &:hover,
+          &:focus {
+            svg {
+              fill: $gray;
+            }
+          }
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          fill-opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  .logo-bar {
+    position: absolute;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+
+    @include breakpoint(presmall) {
+      width: 1024px;
+    }
+
+    @include breakpoint(md) {
+      width: initial;
+    }
+
+
+  }
+
+  .header-logo {
+    // width: 300px;
+    font-size: 1px;
+
+    @include breakpoint(md) {
+      width: 220px;
+    }
+
+    a {
+      padding: 0;
+      margin: 0;
+      display: block;
+      box-shadow: none;
+      margin-top: -28px;
+
+      &:hover {
+        box-shadow: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .header-main-navigation {
+    ul {
+
+      line-height: 1;
+
+      @include breakpoint(md) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+    }
+
+    li {
+
+      // padding: 0 10px;
+      &:first-child {
+        padding-left: 0;
+
+        a {
+          margin-left: 25px;
+          box-shadow: none;
+
+          @include breakpoint(sm) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+
+        a {
+          margin-right: 25px;
+
+          @include breakpoint(sm) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      @include breakpoint(md) {
+        &:last-child {
+          padding-right: 10px;
+        }
+
+        &:first-child {
+          padding-left: 10px;
+        }
+
+        &.menu-item-has-children {
+          padding: 0;
+        }
+      }
+    }
+
+    a {
+      margin: 0 5px;
+      font-size: 2rem;
+      display: block;
+      box-shadow: none;
+      color: $taupe;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      @include breakpoint(md) {
+        margin: 0 0px 20px;
+      }
+
+      &:hover {
+        color: #f2e7d0;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    .header-mobile-wrapper {
+      //ATTN: PIXEL AMOUNT NEEDS TO BE EDITED TO NATURAL HEIGHT OF FIXED HEADER AT THIS BREAKPOINT
+      height: calc(100vh - 114px);
+      overflow-y: scroll;
+      position: fixed;
+      left: 0;
+      right: 0;
+      display: none;
+      padding: 60px 0;
+      background: $black;
+      top: 114px;
+    }
+
+    .header-mobile-menu-container {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include breakpoint(xs) {
+    .header-mobile-wrapper {
+      height: 100vh;
+    }
+  }
+
+  //START OF HAMBURGER NAVIGATION
+  .hamburger {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    z-index: 15;
+    display: none;
+    padding: 5px 2px 0 2px;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+
+    &:hover {
+      color: $taupe;
+    }
+
+    &.is-active:hover {
+      color: $taupe;
+    }
+
+    &.is-active {
+
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: $taupe;
+      }
+    }
+
+    @include breakpoint(md) {
+      display: inline-block;
+    }
+  }
+
+  .hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: $footerBrown;
+    border-radius: 0px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  .hamburger:hover {
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $gray;
+    }
+  }
+
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    content: "";
+    display: block;
+  }
+
+  .hamburger-inner::before {
+    top: -10px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -10px;
+  }
+
+  .hamburger-spring .hamburger-inner {
+    top: 2px;
+    transition: background-color 0.3s ease;
+  }
+
+  .hamburger-spring .hamburger-inner::before {
+    top: 10px;
+    transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      background-color 0.3s ease;
+  }
+
+  .hamburger-spring .hamburger-inner::after {
+    top: 20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1),
+      transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+      background-color 0.3s ease;
+  }
+
+  .hamburger-spring.is-active .hamburger-inner {
+    transition-delay: 0.22s;
+    background-color: transparent !important;
+  }
+
+  .hamburger-spring.is-active .hamburger-inner::before {
+    top: 0;
+    transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+  }
+
+  .hamburger-spring.is-active .hamburger-inner::after {
+    top: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+      transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 10px, 0) rotate(-45deg);
+  }
+
+  // END OF HAMBURGER NAVIGATION
+  .header-main-navigation {
+    .menu-item-has-children {
+      position: relative;
+      //ATTN: background triangle: You can open up /images/caret-down-solid.svg in code editor and edit the fill property on the path element to match your text color.
+      //
+      //Option 2 would be to add &#9660; to this menu item text in dashboard menu editor AND delete the background triangle css block below.
+      //
+      // START OF BACKGROUND TRIANGLE CSS
+      padding-right: 20px;
+      background-image: url(/wp-content/themes/bonnieraitt/images/caret-down-solid.svg);
+      background-size: 13px 18px;
+      background-position: 90% 0px;
+      background-repeat: no-repeat;
+
+      @include breakpoint(md) {
+        background-image: none;
+      }
+
+      //END OF BACKGROUND TRIANGLE CSS
+    }
+
+    .menu-item-has-children>a {
+      cursor: pointer;
+
+      // @include breakpoint(md) {
+      //   display: none;
+      // }
+    }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      left: 0px;
+      top: 0;
+      padding-left: 0;
+      padding-top: 40px;
+      margin-bottom: 0;
+      cursor: pointer;
+      width: inherit;
+      z-index: -1;
+
+      li {
+        padding: 8px;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+        display: block;
+        text-align: left;
+        background: $black;
+
+        &:last-child {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        &:first-child,
+        &:last-child {
+          padding: 8px;
+
+          @include breakpoint(md) {
+            padding: 0 10px;
+            border: none;
+          }
+        }
+
+        @include breakpoint(md) {
+          padding: 0 10px;
+          text-align: center;
+          border: none;
+        }
+      }
+
+      a {
+        display: block;
+        // &:hover {
+        //   color: $
+        // }
+
+        @include breakpoint(md) {
+          margin: 0 0 20px;
+        }
+
+        &:first-child,
+        &.last-child {
+          margin: 0 5px;
+
+          @include breakpoint(md) {
+            margin: 0 0 20px;
+          }
+        }
+      }
+
+      @include breakpoint(md) {
+        display: none;
+        position: static;
+        padding-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        // display: none;
+      }
+    }
+  }
+
+  .menu-item-has-children:focus-within {
+    .sub-menu {
+      display: block;
+    }
+  }
+
+  //separated the hover and focus-within selectors out so that hover still works in edge, if together the whole selector gets cancelled out by ie & edge not recognising :focus-within
+  .menu-item-has-children:hover {
+    .sub-menu {
+      display: block;
+    }
+  }
+}
+
+.body-with-open-nav header.site-header .header-mobile-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint(xs) {
+    justify-content: flex-start;
+  }
+}
+
+.skip-links-container {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  @include breakpoint(xs) {
+    top: 85px;
+    left: 15px;
+    transform: none;
+  }
+}
+
+.skip-links {
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 1.6rem;
+
+  &:focus {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    color: $white;
+    background: $black;
+  }
+}

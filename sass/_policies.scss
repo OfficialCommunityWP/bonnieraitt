@@ -1,0 +1,80 @@
+.legal-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  @include breakpoint(sm) {
+    // at this breakpoint table headers are no longer sticky and tables are horizontally scrollable, they don't both work at the same time
+    overflow-x: scroll;
+  }
+}
+
+.policy-page-content {
+  ul {
+    list-style: inherit;
+    padding-left: 30px;
+  }
+  table {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    position: sticky;
+    top: 0;
+    text-align: left;
+    background: $black;
+    color: $white;
+    padding: 10px;
+    // at this breakpoint table headers are no longer sticky and tables are horizontally scrollable, they both don't work at the same time
+    @include breakpoint(sm) {
+      position: static;
+    }
+  }
+  td,
+  th {
+    vertical-align: top;
+  }
+  td {
+    border-bottom: 1px solid;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 3rem;
+    @include breakpoint(xs) {
+      font-size: 2.2rem;
+    }
+  }
+  h4 {
+    font-size: 2.2rem;
+    @include breakpoint(xs) {
+      font-size: 1.8rem;
+    }
+  }
+  section {
+    padding: 20px 0;
+    @include breakpoint(sm) {
+      // ATTN edit to natural height of fixed header at this breakpoint (if it is fixed)
+      padding-top: 120px;
+    }
+    @include breakpoint(xs) {
+      // ATTN edit to natural height of fixed header at this breakpoint (if it is fixed)
+      padding-top: 84px;
+    }
+  }
+}
+
+#SellingData {
+  @include breakpoint(sm) {
+    // ATTN edit to natural height of fixed header at this breakpoint (if it is fixed)
+    padding-top: 118px;
+  }
+  @include breakpoint(xs) {
+    // ATTN edit to natural height of fixed header at this breakpoint (if it is fixed)
+    padding-top: 84px;
+  }
+}

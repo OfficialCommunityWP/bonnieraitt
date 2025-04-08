@@ -1,0 +1,116 @@
+[
+    {
+        "key": "group_5f4e7dcc8ebec",
+        "title": "Galleries",
+        "fields": [
+            {
+                "key": "field_5f4e7e2908606",
+                "label": "Instructions",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Set the 'featured image' for each gallery from the right column. It will be shown on the gallery landing page.\r\n\r\nHOT TIP: if the images are displaying unevenly on an individual gallery page, experiment with re-ordering the images by dragging (within the basic gallery field on this page).\r\n\r\nTry out different arrangements of portrait and landscape images, and see what the results are on the page.",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5f4e7dd508605",
+                "label": "Basic Gallery",
+                "name": "basic_gallery",
+                "type": "gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "id",
+                "preview_size": "medium",
+                "insert": "append",
+                "library": "all",
+                "min": "",
+                "max": "",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "gallery"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5f4ffe423e9fe",
+        "title": "Gallery Template Notes",
+        "fields": [
+            {
+                "key": "field_5f4ffe498aa5d",
+                "label": "Gallery Template Options",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "There are two template options which can be assigned to the Gallery Landing page (page which displays links to all the individual galleries):\r\n\r\nGallery Archive Even Layout \r\n-gallery preview image will show as evenly spaced squares in three columns\r\n-a good option if few galleries exist\r\n\r\nGallery Archive Masonry Layout\r\n-gallery preview image will keep its original image dimensions\r\n-a good option if many galleries exist\r\n\r\nApply each template to the page to test the results in the browser.",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "archive-gallery-masonry-layout.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "archive-gallery-even-layout.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

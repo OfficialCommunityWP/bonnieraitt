@@ -1,0 +1,67 @@
+[
+    {
+        "key": "group_5f49444dc2af8",
+        "title": "Videos",
+        "fields": [
+            {
+                "key": "field_5f494453a4890",
+                "label": "Video ID",
+                "name": "videoID",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5f49449aa4891",
+                "label": "Feature on Homepage",
+                "name": "feature_on_homepage",
+                "type": "checkbox",
+                "instructions": "The most recent video with this box checked will be featured on the home page. (Recent according to the 'Published on: _____ ' date)",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "featured": "Feature this video on the home page"
+                },
+                "allow_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value",
+                "save_custom": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "videos"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

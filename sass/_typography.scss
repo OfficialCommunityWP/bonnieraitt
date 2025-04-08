@@ -1,0 +1,98 @@
+/*
+====================================
+Typography Defaults
+====================================
+*/
+
+p,
+table,
+ul,
+ol {
+  line-height: 1.4;
+  font-size: 1.4rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 20px;
+  p {
+    margin-top: 0;
+  }
+}
+
+table {
+  td {
+    padding: 10px;
+  }
+  tr td:first {
+    padding-right: 0;
+  }
+}
+
+dt {
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+
+dd {
+  padding: 10px;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ol,
+dl {
+  line-height: 1.8;
+  font-size: 1.8rem;
+}
+
+ul li,
+ol li {
+  padding: 3px;
+}
+
+pre {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.4rem;
+  @include breakpoint(xs) {
+    font-size: 2.6rem;
+  }
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.3rem;
+}
+
+h6 {
+  font-size: 1rem;
+}

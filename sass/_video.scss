@@ -1,0 +1,182 @@
+/*
+====================================
+Video Pages (Archive & Single)
+====================================
+*/
+
+.youtube-player {
+  position: relative;
+  padding-bottom: 58%;
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.youtube-player-preview {
+  position: relative;
+  border-radius: 3px;
+}
+
+.youtube-player-preview:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.one-video-link:hover .youtube-player-preview:after,
+.one-video-link:focus .youtube-player-preview:after {
+  opacity: 1;
+}
+
+.one-video-link {
+  position: relative;
+  z-index: 2;
+  display: block;
+  box-shadow: none;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.youtube-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.youtube-player img {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+}
+
+.archive-video {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -15px;
+
+  .single-youtube {
+    flex-basis: 33.3%;
+    margin-bottom: 40px;
+    max-width: 33.3%;
+    padding: 0 15px;
+
+    @include breakpoint(sm) {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+
+    @include breakpoint(xs) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    h3 {
+      margin-top: 15px;
+
+      @include breakpoint(xs) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  @include breakpoint(xs) {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
+}
+
+.video-player-button {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  outline: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .play {
+    width: 120px;
+    height: 120px;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
+    z-index: 4;
+    background-image: url("images/youtube-white.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @include breakpoint(sm) {
+      opacity: 1;
+    }
+
+    @include breakpoint(xs) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &:focus,
+  &:hover {
+
+    .play,
+    &:after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.tour-archive-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+  }
+}
+
+.tour-archive-main {
+  width: 80%;
+
+  @include breakpoint(sm) {
+    width: 100%;
+  }
+}
+
+.tour-archive-sidebar {
+  width: 20%;
+  padding-left: 30px;
+  text-align: center;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.tour-archive-table {
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+
+  th {
+    position: sticky;
+    top: 0;
+    background: $black;
+    color: $white;
+    text-align: left;
+    padding: 10px;
+
+    @include breakpoint(sm) {
+      position: static;
+    }
+
+    @include breakpoint(xs) {
+      display: none;
+    }
+  }
+
+  th.set-list {
+    width: 25%;
+  }
+
+  td {
+    vertical-align: top;
+    border-bottom: 1px solid $black;
+    //we want to add a lower z index to any elements that are showing through the sticky header, rather than making the <th> have a higher z index (which can cause overlap problems with header nav subnav)
+    position: relative;
+    z-index: -1;
+
+    @include breakpoint(xs) {
+      border-bottom: none;
+      padding: 0;
+      position: static;
+    }
+  }
+
+  .button-style-1 {
+    margin: 0 auto 0 0;
+    width: 100%;
+
+    @include breakpoint(xs) {
+      width: 170px;
+    }
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  .set-list-content {
+    padding: 10px 0;
+    margin-top: 10px;
+    word-break: break-all;
+  }
+}
+
+@include breakpoint(xs) {
+
+  .tour-archive-table,
+  .tour-archive-table thead,
+  .tour-archive-table tr,
+  .tour-archive-table tbody,
+  .tour-archive-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .set-list-container {
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+}
+
+.pagination-tour-archives {
+  margin-top: 20px;
+}
+
+.page-template-page-tour-archives {
+  .menu-sub-pages {
+    ul {
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+
+      li {
+        padding: 3px 16px;
+
+        a {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

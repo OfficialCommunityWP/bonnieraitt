@@ -1,0 +1,338 @@
+/*
+====================================
+Gallery Pages (Archive Masonry Style, Archive Even Style, & Single)
+====================================
+*/
+
+//landing page masonry template option
+.archive-gallery-masonry {
+  column-count: inherit;
+  column-width: 300px;
+  column-gap: 15px;
+  @include breakpoint(xs) {
+    column-count: 1;
+  }
+  .gallery-link {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    color: $white;
+    max-width: 100%;
+    //Max width is for IE
+    &:after {
+      display: block;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: 1;
+      }
+      h3 {
+        text-decoration-color: inherit;
+      }
+    }
+    h3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin: 0;
+      padding: 50px 15px 15px 15px;
+      background-image: linear-gradient(transparent, rgb(0, 0, 0));
+      z-index: 2;
+      text-decoration: underline;
+      text-decoration-color: transparent;
+      transition: text-decoration-color 0.3s ease;
+    }
+    img {
+      display: block;
+    }
+  }
+}
+
+//landing page even template option
+.archive-gallery-even {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
+  @include breakpoint(xs) {
+    display: block;
+  }
+  .link-wrapper {
+    width: 33.33%;
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    @include breakpoint(xs) {
+      flex-basis: 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+    a {
+      width: 100%;
+      color: $white;
+      position: relative;
+      display: block;
+      &:after {
+        display: block;
+        content: "";
+        background-color: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      &:hover,
+      &:focus {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    h3 {
+      margin: 0;
+      padding: 50px 15px 15px 15px;
+      background-image: linear-gradient(transparent, rgb(0, 0, 0));
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .gallery-category-img-wrapper {
+    height: 333px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @include breakpoint(md) {
+      height: 300px;
+    }
+    @include breakpoint(sm) {
+      height: 220px;
+    }
+    @include breakpoint(xs) {
+      height: 70vw;
+    }
+  }
+}
+
+//Single Gallery Page
+.gallery-images {
+  column-count: inherit;
+  column-width: 250px;
+  column-gap: 15px;
+  @include breakpoint(xs) {
+    column-count: 1;
+  }
+  li {
+    padding: 0;
+    margin-bottom: 15px;
+    display: block;
+    max-width: 100%;
+    //max width is for IE
+  }
+  button {
+    -webkit-appearance: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    max-width: 100%;
+    //max width is for IE
+    &:after {
+      display: block;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    &:hover,
+    &:focus {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  img {
+    display: block;
+    border-radius: 3px;
+  }
+}
+
+.gallery-modal {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 5;
+  @include breakpoint(sm) {
+    //ATTN: this needs to be edited to include the natural height of the fixed header (if header is fixed) at this breakpoint
+    top: 119px;
+    height: calc(100vh - 119px);
+  }
+  @include breakpoint(xs) {
+    //ATTN: this needs to be edited to include the natural height of the fixed header (if header is fixed) at this breakpoint
+    top: 84px;
+    height: calc(100vh - 84px);
+  }
+  figcaption {
+    color: $white;
+    font-size: 1.4rem;
+  }
+  .slider-next,
+  .slider-prev,
+  .gallery-modal-close {
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background: $white;
+    border: 3px solid $black;
+    cursor: pointer;
+    svg {
+      width: 10px;
+      height: 17px;
+      fill: $black;
+      filter: none;
+    }
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.8);
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px $white;
+    }
+    @include breakpoint(xs) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .slider-next {
+    right: 5%;
+    @include breakpoint(xs) {
+      top: calc(100% - 30px);
+    }
+  }
+  .slider-prev {
+    left: 5%;
+    @include breakpoint(xs) {
+      top: calc(100% - 30px);
+    }
+  }
+}
+
+.gallery-modal-close {
+  right: 5%;
+  top: 25px;
+  padding-top: 2px;
+  &:after {
+    display: block;
+    content: "Close";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    right: 0;
+    color: $white;
+    font-size: 1rem;
+  }
+  @include breakpoint(xs) {
+    top: 16px;
+    right: 16px;
+  }
+
+  @include breakpoint(xs) {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.gallery-modal.modal-showing {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.one-modal-img {
+  width: 100%;
+  margin-right: 5px;
+  img {
+    max-height: calc(100vh - 200px);
+    margin: 0 auto;
+    display: block;
+    border-radius: 3px;
+    @include breakpoint(sm) {
+      //ATTN: natural height of the fixed header at this breakpoint has been added to the starting 200px
+      max-height: calc(100vh - 319px);
+    }
+    @include breakpoint(sm) {
+      //ATTN: natural height of the fixed header at this breakpoint has been added to the starting 200px
+      max-height: calc(100vh - 284px);
+    }
+  }
+  figcaption {
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+.modal-wrapper {
+  max-width: 70vw;
+  margin: 100px auto;
+  @include breakpoint(xs) {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //NOTE this must be edited to the natural height of fixed header
+    min-height: calc(100vh - 84px);
+  }
+}
+
+.body-with-open-modal {
+  position: fixed;
+}

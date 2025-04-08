@@ -1,0 +1,42 @@
+[
+    {
+        "key": "group_5f4557c6e5f8e",
+        "title": "News Post Instructions",
+        "fields": [
+            {
+                "key": "field_5f4557d6d78a5",
+                "label": "How to Add News Posts to Home Page",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "On the right column of this page, click DOCUMENT, then the STICK TO TOP OF BLOG checkbox. \r\n\r\nThe most recent published post with this checkbox selected will show as a full post on the home page in the large featured post area (left column of news section). \r\n\r\nThe next three most recent published posts with this checkbox selected will show as short excerpts on the home page in the smaller excerpts section (right column of news section).\r\n\r\nPosts that do not have the STICK TO TOP OF BLOG checkbox selected will show only on the news page and not on the homepage.",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

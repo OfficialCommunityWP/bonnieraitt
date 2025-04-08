@@ -1,0 +1,165 @@
+.page-template-page-bio-bonnies-story,
+.page-template-page-bio-the-band {
+    .right {
+        .content {
+            display: flex;
+            margin: 20px 0;
+            flex-wrap: wrap;
+
+            .bio-text {
+                width: 50%;
+                padding-right: 20px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                    padding-right: 0;
+                }
+
+
+                .band-name {
+                    color: $taupe;
+                    font-size: 4.0rem;
+                    font-weight: bold;
+                }
+            }
+
+            .bio-image {
+                width: 50%;
+                padding-left: 20px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                img {
+                    border-radius: 4px;
+                    filter: drop-shadow(8px 8px 8px #000);
+                    border: 2px solid #6c644f;
+                    margin-top: 18px;
+                }
+                a {
+                    box-shadow: none;
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .left {
+        .content {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 20px 0;
+
+            @include breakpoint(sm) {
+                flex-wrap: wrap;
+            }
+
+            .bio-text {
+                width: 50%;
+                padding-left: 20px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                    padding-left: 0;
+                }
+
+                .band-name {
+                    color: $taupe;
+                    font-size: 4.0rem;
+                    font-weight: bold;
+                }
+            }
+
+            .bio-image {
+                width: 50%;
+                padding-right: 20px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                    padding-right: 0;
+                }
+
+                img {
+                    border-radius: 4px;
+                    filter: drop-shadow(8px 8px 8px #000);
+                    border: 2px solid #6c644f;
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+}
+
+.page-template-page-activism {
+    .left {
+        .activism-content {
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                font-size: 4.0rem;
+                color: $taupe;
+                font-weight: bold;
+            }
+
+            .benefit-text {
+                width: 50%;
+            }
+
+            .benefit-image {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                border-radius: 3px;
+            }
+            img {
+                border-radius: 3px;
+            }
+        }
+    }
+
+    .right {
+        .activism-content {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row-reverse;
+
+            @include breakpoint(sm) {
+                flex-direction: column-reverse;
+            }
+
+            img {
+                border-radius: 3px;
+            }
+
+            h2 {
+                font-size: 4.0rem;
+                color: $taupe;
+                font-weight: bold;
+            }
+
+            .benefit-text {
+                width: 50%;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                }
+            }
+
+            .benefit-image {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                border-radius: 3px;
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

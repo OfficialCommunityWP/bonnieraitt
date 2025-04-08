@@ -1,0 +1,89 @@
+/*
+====================================
+SASS Variables
+====================================
+*/
+
+/* Colours */
+
+$black: #000;
+$white: #fff;
+$gray: #eee;
+$red: #a91308;
+
+$taupe: #9D8652;
+$sand: #DED3B9;
+$deepBrown: #776233;
+$parchment: #EFE8D9;
+
+$robin: #83EEF7;
+$steel: #707070;
+$golden: #EBB45C;
+$sunFlower: #24B6F7;
+
+$gray2: #DDDDDD;
+$medGray1: #BBBBBB;
+$medGray2: #888888;
+$darkGray1: #777777;
+$darkGray2: #454545;
+$footerBrown: #96804e;
+$footerLight: #d6ccb5;
+
+$bodyFont: noto-serif,
+serif;
+$accentFont: adobe-caslon-pro,
+serif;
+
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point==xl {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  }
+
+  @else if $point==lg {
+    @media (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @else if $point==premedium {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $point==md {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  }
+
+  @else if $point==presmall {
+    @media (max-width: 1030px) {
+      @content;
+    }
+  }
+
+  @else if $point==sm {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @else if $point==xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $point==xxs {
+    @media (max-width: 370px) {
+      @content;
+    }
+  }
+}

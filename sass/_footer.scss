@@ -1,0 +1,404 @@
+/*
+====================================
+Footer
+====================================
+*/
+
+footer.site-footer {
+  margin: 55px 0 0;
+  height: 150px;
+  background: url(/wp-content/themes/bonnieraitt/images/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: top;
+  filter: drop-shadow(-4px -4px 8px #000);
+  color: $footerBrown;
+
+  @include breakpoint(sm) {
+    height: initial;
+    background-size: cover;
+  }
+
+  a {
+    box-shadow: none;
+    color: $footerBrown;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+footer {
+  .container {
+    display: flex;
+    padding-top: 15px;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .footer-lower {
+    display: flex;
+    justify-content: space-between;
+    // padding-top: 35px;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      padding-top: 10px;
+    }
+  }
+}
+
+.footer-membership {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+
+  @include breakpoint(sm) {
+    flex-direction: column;
+    height: initial;
+  }
+
+  .sign-in-out {
+    background: $taupe;
+    border: none;
+    color: $sand;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: $red;
+    }
+  }
+
+  .membership-logged-out {
+    display: flex;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+
+    .member-links {
+      margin: 0 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include breakpoint(sm) {
+        flex-direction: row;
+        margin: 0;
+      }
+
+      li {
+        padding: 0;
+
+        @include breakpoint(sm) {
+          margin: 10px;
+        }
+
+        a {
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(sm) {
+        flex-direction: column;
+      }
+
+      .form-control {
+        @include breakpoint(sm) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin: 10px 0 0 0;
+        }
+
+        label {
+          @include breakpoint(sm) {
+            width: 100px;
+            margin-right: 20px;
+            text-align: right;
+          }
+        }
+
+        input {
+          height: 35px;
+          margin-right: 20px;
+
+          @include breakpoint(sm) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .form-checkbox {
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: 1.4rem;
+        }
+
+        input {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+
+  .membership-logged-in {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+    border: 1px solid #96804e;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(sm) {
+      height: 100px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      @include breakpoint(sm) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    .logged-in-controls {
+      @include breakpoint(sm) {
+        margin-top: 12px;
+      }
+
+      a {
+        // font-size: 3.4rem;
+        font-weight: bold;
+        text-shadow: 6px 6px 6px #000;
+        display: inline-block;
+        margin: 0 12px;
+      }
+    }
+  }
+}
+
+
+
+.footer-left {
+  width: 25%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.footer-middle {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include breakpoint(sm) {
+    width: 100%;
+  }
+
+  #menu-footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+    li {
+      font-size: 1.2rem;
+
+      a {
+        color: $footerLight;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #myLinks {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 3.4rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-shadow: 6px 6px 6px #000;
+
+    @include breakpoint(sm) {
+      font-size: 2.0rem;
+    }
+
+    li {
+      margin: 0 15px;
+    }
+
+    svg {
+      height: 20px;
+      width: 20px;
+      fill: $footerBrown;
+      // filter: drop-shadow(8px 8px 8px #000);
+    }
+  }
+}
+
+.footer-social ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  line-height: 1;
+  margin: 0 0 20px 0;
+
+  @include breakpoint(sm) {
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  li {
+    background-color: $taupe;
+    border-radius: 32px;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0 5px;
+
+    &:first-child {
+      margin: 0 5px 0 0;
+    }
+
+    a {
+      font-weight: normal;
+      font-size: 2.2rem;
+      margin: 3px 0 0 0;
+      box-shadow: none;
+
+      @include breakpoint(xs) {
+        margin: 0 5px;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          fill: $gray;
+        }
+      }
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill-opacity: 1;
+    }
+  }
+
+}
+
+p.footer-copyright {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+
+  @include breakpoint(xs) {
+    text-align: center;
+  }
+}
+
+.footer-right {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include breakpoint(sm) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    line-height: 1;
+    font-size: 1.4rem;
+    margin: 10px 0 20px;
+
+    @include breakpoint(xs) {
+      display: block;
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 0;
+      justify-content: center;
+    }
+
+    li {
+      padding: 0 9px;
+      border-right: 1px solid;
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      @include breakpoint(xs) {
+        border-right: none;
+        margin-bottom: 12px;
+
+        &:last-child {
+          padding-right: 9px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.do-not-sell-link {
+  font-size: 1.2rem;
+}
+
+.footer-occ-logo {
+  filter: drop-shadow(8px 8px 8px #000);
+
+  @include breakpoint(sm) {
+    max-width: 120px;
+  }
+}

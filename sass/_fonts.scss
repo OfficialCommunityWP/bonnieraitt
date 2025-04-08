@@ -1,0 +1,19 @@
+/*
+====================================
+Custom Font Defaults
+====================================
+*/
+
+//ATTN: font files will need to be added to /fonts folder. Theme name and font name will need to be edited here.
+
+@font-face {
+  font-family: "FONTNAMEHERE";
+  src: url("/wp-content/themes/bonnieraitt/fonts/FONTNAME.eot");
+  src: url("/wp-content/themes/bonnieraitt/fonts/FONTNAME.eot?#iefix")
+      format("embedded-opentype"),
+    url("/wp-content/themes/bonnieraitt/fonts/FONTNAME.woff2") format("woff2"),
+    url("/wp-content/themes/bonnieraitt/fonts/FONTNAME.woff") format("woff"),
+    url("/wp-content/themes/bonnieraitt/fonts/FONTNAME.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

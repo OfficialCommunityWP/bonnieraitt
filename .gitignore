@@ -1,0 +1,38 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build and Distribution Files
+dist/
+build/
+*.zip
+
+# WordPress specific
+wp-config.php
+wp-content/advanced-cache.php
+wp-content/backup-*
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+
+# Log files
+*.log
+logs/
+
+# Environment files
+.env
+.env.*
+!.env.example
