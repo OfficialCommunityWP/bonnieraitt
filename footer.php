@@ -1,9 +1,5 @@
 <footer class="site-footer" role="contentinfo" id="footer">
   <div class="container">
-  
-  <!-- Add the widget container div here -->
-  <div id="occ2-widget-root"></div>
-  
   <div class="footer-lower">
     <div class="footer-left">
       <div class="footer-social">

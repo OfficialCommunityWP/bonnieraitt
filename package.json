@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "occ2-widget-app": "^0.1.30",
+    "occ2-widget": "^0.1.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
