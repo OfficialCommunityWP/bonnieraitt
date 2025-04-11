@@ -159,5 +159,8 @@
 
 <?php wp_footer(); ?>
 
+<!-- OCC2 Widget Root Container -->
+<div id="occ2-widget-root"></div>
+
 </body>
 </html>

@@ -14,10 +14,16 @@ function App() {
 // Export the App component so it can be used by webpack
 export default App;
 
-// Render the component to the DOM when using as a standalone app
-if (document.getElementById("occ2-widget-root")) {
-  import("react-dom/client").then(({ createRoot }) => {
-    const root = createRoot(document.getElementById("occ2-widget-root"));
-    root.render(<App />);
-  });
-}
+// Wait for DOM to be fully loaded before attempting to render
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the element exists in the DOM
+  const rootElement = document.getElementById("occ2-widget-root");
+  if (rootElement) {
+    import("react-dom/client").then(({ createRoot }) => {
+      const root = createRoot(rootElement);
+      root.render(<App />);
+    });
+  } else {
+    console.error("Could not find element with ID 'occ2-widget-root' to mount the OCC2Widget");
+  }
+});
