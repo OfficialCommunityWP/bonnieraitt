@@ -1,13 +1,26 @@
 import React from "react";
+import Frame from "react-frame-component";
 import { OCC2Widget } from "occ2-widget";
 
 function App() {
   return (
-    <OCC2Widget
-      theme="dark" // Optional: 'light' | 'dark'
-      position="right" // Optional: 'left' | 'right'
-      isOpen={false}
-    />
+    <Frame
+      style={{ width: "100%", height: "100%", border: "none" }}
+      head={
+        <>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/occ2-widget@latest/dist/index.css"
+          />
+        </>
+      }
+    >
+      <OCC2Widget theme="dark" position="right" isOpen={false} />
+    </Frame>
   );
 }
 
@@ -15,7 +28,7 @@ function App() {
 export default App;
 
 // Wait for DOM to be fully loaded before attempting to render
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Check if the element exists in the DOM
   const rootElement = document.getElementById("occ2-widget-root");
   if (rootElement) {
@@ -24,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
       root.render(<App />);
     });
   } else {
-    console.error("Could not find element with ID 'occ2-widget-root' to mount the OCC2Widget");
+    console.error(
+      "Could not find element with ID 'occ2-widget-root' to mount the OCC2Widget"
+    );
   }
 });

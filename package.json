@@ -12,9 +12,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "occ2-widget": "^0.1.32",
+    "occ2-widget": "^0.1.33",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-frame-component": "^5.2.7"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
