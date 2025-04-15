@@ -70,6 +70,9 @@
      
     </div>
 
+        <!-- Add the widget container div here -->
+        <div id="occ2-widget-root"></div>
+
     <div class="footer-right">
     
       <a href="/cookies#SellingData" class="do-not-sell-link">Do Not Sell My Personal Information</a>
@@ -158,8 +161,6 @@
 	</script>
 
 <?php wp_footer(); ?>
-
-<div id="occ2-widget-root"></div>
 
 </body>
 </html>
