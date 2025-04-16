@@ -160,7 +160,7 @@
 <?php wp_footer(); ?>
 
 <div id="occ2-widget-root"></div>
-<h2>test!!!2!</h2>
+<h2>test 3</h2>
 
 </body>
 </html>
