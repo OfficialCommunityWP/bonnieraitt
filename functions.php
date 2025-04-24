@@ -156,9 +156,9 @@ function enqueue_occ2_widget() {
     
     wp_enqueue_script(
         'occ2-widget-vendors-2',
-        get_template_directory_uri() . '/dist/613.bundle.js',
+        get_template_directory_uri() . '/dist/433.bundle.js',
         array('occ2-widget-bundle'),
-        filemtime(get_template_directory() . '/dist/613.bundle.js'),
+        filemtime(get_template_directory() . '/dist/433.bundle.js'),
         true
     );
 }
